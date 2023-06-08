@@ -7,9 +7,21 @@
 }
 
 body {
-	max-width: 1440px;
-	margin: auto;
+	min-height: 100vh;
 	padding: 0 100px;
+	position: relative;
+}
+
+#root {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main {
+	max-width: 1240px;
+	padding-bottom: 190px;
 }
 
 a {

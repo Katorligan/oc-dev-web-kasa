@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 function House() {
 	const { houseId } = useParams();
 
-	return <div>Logement {houseId}</div>;
+	return <main>Logement {houseId}</main>;
 }
 
 export default House;
