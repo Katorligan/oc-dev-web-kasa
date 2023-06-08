@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom';
 import './index.css';
 
 function Card(props) {
-	const { picture, alt, title } = props;
+	const { picture, title, id } = props;
 
 	return (
-		<div className="card">
-			<img src={picture} alt={alt} />
+		<Link to={`/house/${id}`} className="card">
+			<img src={picture} alt={title} />
 			<div className="gradient-bg">{title && <h2>{title}</h2>}</div>
-		</div>
+		</Link>
 	);
 }
 
