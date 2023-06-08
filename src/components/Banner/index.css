@@ -1,0 +1,24 @@
+.banner {
+	position: relative;
+}
+
+.banner img {
+	width: 100%;
+	height: 200px;
+	border-radius: 25px;
+	object-fit: cover;
+}
+
+.banner .dark-bg {
+	width: 100%;
+	height: 200px;
+	border-radius: 25px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
