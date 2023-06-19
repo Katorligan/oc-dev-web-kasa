@@ -21,6 +21,7 @@ body {
 
 main {
 	max-width: 1240px;
+	width: 100%;
 	padding-bottom: 190px;
 }
 
