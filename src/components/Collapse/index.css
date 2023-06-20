@@ -1,8 +1,8 @@
 .collapse-wrapper {
 	margin: 30px 0;
 	overflow: hidden;
-	transition: max-height 600ms;
-	max-height: 200px;
+	transition: max-height 600ms ease-in;
+	max-height: 500px;
 }
 
 .collapse-title {
@@ -34,6 +34,7 @@
 
 .collapse-wrapper.closed {
 	max-height: 50px;
+	transition: max-height 300ms ease-out;
 }
 
 .collapse-wrapper.closed p {
