@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import Banner from '../../components/Banner';
 import Card from '../../components/Card';
+import Loader from '../../components/Loader';
 import bannerPicture from '../../assets/images/banner_home.png';
 import './index.css';
 
 function Home() {
 	const [houses, setHouses] = useState([]);
+	const [isLoading, setLoading] = useState(true);
 
 	useEffect(() => {
 		async function fetchData() {
@@ -15,6 +17,8 @@ function Home() {
 				setHouses(data);
 			} catch (e) {
 				console.log(e);
+			} finally {
+				setLoading(false);
 			}
 		}
 		fetchData();
@@ -23,11 +27,15 @@ function Home() {
 	return (
 		<main>
 			<Banner picture={bannerPicture} alt="Falaises de bord de mer" title="Chez vous, partout et ailleurs" />
-			<div className="card-wrapper">
-				{houses.map((house) => (
-					<Card key={house.id} picture={house.cover} title={house.title} id={house.id} />
-				))}
-			</div>
+			{isLoading ? (
+				<Loader />
+			) : (
+				<div className="card-wrapper">
+					{houses.map((house) => (
+						<Card key={house.id} picture={house.cover} title={house.title} id={house.id} />
+					))}
+				</div>
+			)}
 		</main>
 	);
 }
