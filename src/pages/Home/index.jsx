@@ -32,7 +32,7 @@ function Home() {
 			) : (
 				<div className="card-wrapper">
 					{houses.map((house) => (
-						<Card key={house.id} picture={house.cover} title={house.title} id={house.id} />
+						<Card key={house.id} house={house} />
 					))}
 				</div>
 			)}

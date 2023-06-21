@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom';
 import './index.css';
 
 function Card(props) {
-	const { picture, title, id } = props;
+	const { house } = props;
 
 	return (
-		<Link to={`/house/${id}`} className="card">
-			<img src={picture} alt={title} />
-			<div className="gradient-bg">{title && <h2>{title}</h2>}</div>
+		<Link to={`/house/${house.id}`} className="card" onClick={() => localStorage.setItem(house.id, JSON.stringify(house))}>
+			<img src={house.cover} alt={house.title} />
+			<div className="gradient-bg">
+				<h2>{house.title}</h2>
+			</div>
 		</Link>
 	);
 }
