@@ -8,7 +8,7 @@ function Slideshow(props) {
 	return (
 		<div className="slideshow">
 			{pictures.map((picture, index) => (
-				<img className={index === 0 ? 'slide active' : 'slide'} src={picture} alt="Logement" />
+				<img className={index === 0 ? 'slide active' : 'slide'} src={picture} alt="Logement" key={`picture-${index}-${picture}`} />
 			))}
 			<img className="previous" src={arrowLeft} alt="Précédent" />
 			<img className="next" src={arrowRight} alt="Suivant" />
