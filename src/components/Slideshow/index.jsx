@@ -1,9 +1,23 @@
-import './index.css';
+import { useState } from 'react';
 import arrowLeft from '../../assets/images/arrow_left.png';
 import arrowRight from '../../assets/images/arrow_right.png';
+import './index.css';
 
 function Slideshow(props) {
 	const { pictures } = props;
+	const [activeIndex, setActiveIndex] = useState(0);
+
+	function changePicture(direction) {
+		let newIndex = 0;
+		const slides = document.getElementsByClassName('slide');
+
+		slides[activeIndex].classList.remove('active');
+
+		newIndex = (((activeIndex + direction) % slides.length) + slides.length) % slides.length;
+		setActiveIndex(newIndex);
+
+		slides[newIndex].classList.add('active');
+	}
 
 	return (
 		<div className="slideshow">
@@ -12,9 +26,11 @@ function Slideshow(props) {
 			))}
 			{pictures.length > 1 && (
 				<div className="slideshow-interaction-wrapper">
-					<img className="previous" src={arrowLeft} alt="Précédent" />
-					<img className="next" src={arrowRight} alt="Suivant" />
-					<div className="slide-counter">1/{pictures.length}</div>
+					<img className="previous" src={arrowLeft} alt="Précédent" onClick={() => changePicture(-1)} />
+					<img className="next" src={arrowRight} alt="Suivant" onClick={() => changePicture(1)} />
+					<div className="slide-counter">
+						{activeIndex + 1}/{pictures.length}
+					</div>
 				</div>
 			)}
 		</div>
