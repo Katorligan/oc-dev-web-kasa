@@ -10,9 +10,13 @@ function Slideshow(props) {
 			{pictures.map((picture, index) => (
 				<img className={index === 0 ? 'slide active' : 'slide'} src={picture} alt="Logement" key={`picture-${index}-${picture}`} />
 			))}
-			<img className="previous" src={arrowLeft} alt="Précédent" />
-			<img className="next" src={arrowRight} alt="Suivant" />
-			{pictures.length > 1 && <div className="slide-counter">1/{pictures.length}</div>}
+			{pictures.length > 1 && (
+				<div className="slideshow-interaction-wrapper">
+					<img className="previous" src={arrowLeft} alt="Précédent" />
+					<img className="next" src={arrowRight} alt="Suivant" />
+					<div className="slide-counter">1/{pictures.length}</div>
+				</div>
+			)}
 		</div>
 	);
 }
