@@ -1,5 +1,7 @@
 import { useParams } from 'react-router-dom';
 import Slideshow from '../../components/Slideshow';
+import Rating from '../../components/Ratings';
+import Collapse from '../../components/Collapse';
 
 function House() {
 	const { houseId } = useParams();
@@ -8,6 +10,31 @@ function House() {
 	return (
 		<main>
 			<Slideshow pictures={house.pictures} />
+			<h2>{house.title}</h2>
+			<h3>{house.location}</h3>
+			<div className="tags-wrapper">
+				{house.tags.map((tag, index) => (
+					<div className="tag" key={`tag-${index}-${tag}`}>
+						{tag}
+					</div>
+				))}
+			</div>
+			<div className="host-wrapper">
+				{house.host.name}
+				<img src={house.host.picture} alt={`${house.host.name} profile`} />
+			</div>
+			<Rating rating={house.rating} />
+			<Collapse title="Description" content={house.description} />
+			<Collapse
+				title="Équipements"
+				content={
+					<ul className="equipments-wrapper">
+						{house.equipments.map((equipment, index) => (
+							<li key={`equipment-${index}-${equipment}`}>{equipment}</li>
+						))}
+					</ul>
+				}
+			/>
 		</main>
 	);
 }
