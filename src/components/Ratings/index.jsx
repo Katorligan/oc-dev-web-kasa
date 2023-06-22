@@ -6,7 +6,11 @@ function Rating(props) {
 	const { rating } = props;
 	const ratingsNumber = [1, 2, 3, 4, 5];
 
-	return <div className="rating-wrapper">{ratingsNumber.map((number) => (number <= rating ? <img src={starActive} alt="Star active" /> : <img src={starInactive} alt="Star inactive" />))}</div>;
+	return (
+		<div className="rating-wrapper">
+			{ratingsNumber.map((number) => (number <= rating ? <img src={starActive} alt="Star active" key={number} /> : <img src={starInactive} alt="Star inactive" key={number} />))}
+		</div>
+	);
 }
 
 export default Rating;
