@@ -12,7 +12,7 @@ function Collapse(props) {
 				<h2>{title}</h2>
 				<img src={arrow} alt="arrow"></img>
 			</div>
-			{content}
+			<div className="content">{content}</div>
 		</div>
 	);
 }

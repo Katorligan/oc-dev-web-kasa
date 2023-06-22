@@ -20,7 +20,7 @@
 	transition: transform, 500ms;
 }
 
-.collapse-wrapper p {
+.collapse-wrapper .content {
 	color: #ff6060;
 	background-color: #f6f6f6;
 	padding: 25px 20px 20px 20px;
@@ -37,7 +37,7 @@
 	transition: max-height 300ms ease-out;
 }
 
-.collapse-wrapper.closed p {
+.collapse-wrapper.closed .content {
 	transform: translateY(-100%);
 }
 
