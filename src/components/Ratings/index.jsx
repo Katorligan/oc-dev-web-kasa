@@ -1,6 +1,6 @@
 import starActive from '../../assets/images/star_active.png';
 import starInactive from '../../assets/images/star_inactive.png';
-import './index.css';
+import './index.scss';
 
 function Rating(props) {
 	const { rating } = props;

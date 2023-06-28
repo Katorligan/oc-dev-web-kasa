@@ -1,4 +1,4 @@
-import './index.css';
+import './index.scss';
 
 function Banner(props) {
 	const { picture, alt, title } = props;

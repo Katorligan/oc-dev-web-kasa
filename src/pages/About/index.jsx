@@ -1,7 +1,7 @@
 import Banner from '../../components/Banner';
 import bannerPicture from '../../assets/images/banner_about.png';
 import Collapse from '../../components/Collapse';
-import './index.css';
+import './index.scss';
 
 function About() {
 	return (

@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import Slideshow from '../../components/Slideshow';
 import Rating from '../../components/Ratings';
 import Collapse from '../../components/Collapse';
-import './index.css';
+import './index.scss';
 
 function House() {
 	const { houseId } = useParams();

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import arrow from '../../assets/images/arrow.png';
-import './index.css';
+import './index.scss';
 
 function Collapse(props) {
 	const { title, content } = props;

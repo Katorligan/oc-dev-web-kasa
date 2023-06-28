@@ -3,7 +3,7 @@ import Banner from '../../components/Banner';
 import Card from '../../components/Card';
 import Loader from '../../components/Loader';
 import bannerPicture from '../../assets/images/banner_home.png';
-import './index.css';
+import './index.scss';
 
 function Home() {
 	const [houses, setHouses] = useState([]);
