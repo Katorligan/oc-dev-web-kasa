@@ -2,10 +2,16 @@ import { useParams } from 'react-router-dom';
 import Slideshow from '../../components/Slideshow';
 import Rating from '../../components/Ratings';
 import Collapse from '../../components/Collapse';
+import Error from '../../components/Error';
 import './index.scss';
 
 function House() {
 	const { houseId } = useParams();
+
+	if (!localStorage.getItem(houseId)) {
+		return <Error />;
+	}
+
 	const house = JSON.parse(localStorage.getItem(houseId));
 
 	return (
