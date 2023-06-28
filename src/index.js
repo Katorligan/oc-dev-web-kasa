@@ -5,7 +5,7 @@ import './index.scss';
 import Home from './pages/Home';
 import House from './pages/House';
 import About from './pages/About';
-import Error from './pages/Error';
+import Error from './components/Error';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
