@@ -1,3 +1,5 @@
+@use './utils/styles' as *;
+
 * {
 	margin: 0;
 	padding: 0;
@@ -27,5 +29,5 @@ main {
 
 a {
 	text-decoration: none;
-	color: #ff6060;
+	color: $color-primary;
 }

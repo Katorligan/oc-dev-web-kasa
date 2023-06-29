@@ -1,84 +1,86 @@
+@use '../../utils/styles' as *;
+
 .title-host-wrapper {
 	display: flex;
 	justify-content: space-between;
 	margin: 30px 0;
 	height: 120px;
-}
 
-.title-tags-wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
+	.title-tags-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 
-.title-wrapper {
-	color: #ff6060;
-}
+		.title-wrapper {
+			color: $color-primary;
 
-.title-wrapper h2 {
-	font-size: 1.8em;
-	margin-bottom: 5px;
-}
+			h2 {
+				font-size: 1.8em;
+				margin-bottom: 5px;
+			}
 
-.title-wrapper h3 {
-	font-size: 1em;
-}
+			h3 {
+				font-size: 1em;
+			}
+		}
 
-.tags-wrapper {
-	display: flex;
-	gap: 10px;
-}
+		.tags-wrapper {
+			display: flex;
+			gap: 10px;
 
-.tag {
-	width: 130px;
-	height: 30px;
-	color: white;
-	background-color: #ff6060;
-	font-size: 0.8em;
-	font-weight: 400;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 13px;
-}
+			.tag {
+				width: 130px;
+				height: 30px;
+				color: white;
+				background-color: $color-primary;
+				font-size: 0.8em;
+				font-weight: 400;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 13px;
+			}
+		}
+	}
 
-.host-rating-wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-end;
-}
+	.host-rating-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-end;
 
-.host-wrapper {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	color: #ff6060;
-}
+		.host-wrapper {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			color: $color-primary;
 
-.host-wrapper img {
-	width: 60px;
-	height: 60px;
-	object-fit: cover;
-	border-radius: 60px;
+			img {
+				width: 60px;
+				height: 60px;
+				object-fit: cover;
+				border-radius: 60px;
+			}
+		}
+	}
 }
 
 .description-wrapper {
 	display: flex;
 	justify-content: space-between;
-}
 
-.description-wrapper .collapse-wrapper {
-	width: 47%;
-}
+	.collapse-wrapper {
+		width: 47%;
 
-.description-wrapper .collapse-wrapper h2 {
-	font-size: 1em;
-	font-weight: 400;
-}
+		h2 {
+			font-size: 1em;
+			font-weight: 400;
+		}
 
-.description-wrapper .collapse-wrapper li {
-	list-style-type: none;
-	font-weight: 400;
-	line-height: 1.5em;
+		li {
+			list-style-type: none;
+			font-weight: 400;
+			line-height: 1.5em;
+		}
+	}
 }

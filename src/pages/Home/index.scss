@@ -1,8 +1,10 @@
+@use '../../utils/styles' as *;
+
 .card-wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 50px;
-	background-color: #f6f6f6;
+	background-color: $color-secondary;
 	border-radius: 25px;
 	padding: 50px;
 	margin: 40px 0;
