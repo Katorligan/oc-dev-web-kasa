@@ -26,8 +26,12 @@ function Slideshow(props) {
 			))}
 			{pictures.length > 1 && (
 				<div className="slideshow-interaction-wrapper">
-					<img className="previous" src={arrowLeft} alt="Précédent" onClick={() => changePicture(-1)} />
-					<img className="next" src={arrowRight} alt="Suivant" onClick={() => changePicture(1)} />
+					<div className="previous" onClick={() => changePicture(-1)}>
+						<img src={arrowLeft} alt="Précédent" />
+					</div>
+					<div className="next" onClick={() => changePicture(1)}>
+						<img src={arrowRight} alt="Suivant" />
+					</div>
 					<div className="slide-counter">
 						{activeIndex + 1}/{pictures.length}
 					</div>
