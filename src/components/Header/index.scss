@@ -10,5 +10,9 @@ header {
 	nav {
 		display: flex;
 		gap: 50px;
+
+		.link-active {
+			text-decoration: underline;
+		}
 	}
 }
