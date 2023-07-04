@@ -3,11 +3,29 @@
 	aspect-ratio: 1 / 1;
 	position: relative;
 
+	@media (max-width: 700px) {
+		aspect-ratio: auto;
+		height: 300px;
+	}
+
+	@media (max-width: 360px) {
+		height: 200px;
+	}
+
 	img {
 		width: 100%;
 		aspect-ratio: 1/1;
 		border-radius: 10px;
 		object-fit: cover;
+
+		@media (max-width: 700px) {
+			aspect-ratio: auto;
+			height: 300px;
+		}
+
+		@media (max-width: 360px) {
+			height: 200px;
+		}
 	}
 
 	.gradient-bg {
@@ -22,10 +40,19 @@
 		justify-content: flex-start;
 		align-items: flex-end;
 		padding: 25px;
+
+		@media (max-width: 700px) {
+			aspect-ratio: auto;
+			height: 300px;
+		}
+
+		@media (max-width: 360px) {
+			height: 200px;
+		}
 	}
 
 	h2 {
-		max-width: 50%;
+		max-width: 80%;
 		font-size: 1.1em;
 		color: white;
 	}
