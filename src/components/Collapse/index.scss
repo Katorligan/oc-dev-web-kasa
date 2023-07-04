@@ -6,6 +6,10 @@
 	transition: max-height 600ms ease-in;
 	max-height: 500px;
 
+	@media (max-width: 700px) {
+		margin: 20px 0;
+	}
+
 	.collapse-title {
 		color: white;
 		background-color: $color-primary;
@@ -15,6 +19,16 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@media (max-width: 700px) {
+			height: 40px;
+			font-size: 0.7em;
+		}
+
+		@media (max-width: 360px) {
+			height: 30px;
+			font-size: 0.6em;
+		}
 
 		img {
 			transition: transform, 500ms;
@@ -37,6 +51,14 @@
 .collapse-wrapper.closed {
 	max-height: 50px;
 	transition: max-height 300ms ease-out;
+
+	@media (max-width: 700px) {
+		max-height: 40px;
+	}
+
+	@media (max-width: 360px) {
+		max-height: 30px;
+	}
 
 	.content {
 		transform: translateY(-100%);
