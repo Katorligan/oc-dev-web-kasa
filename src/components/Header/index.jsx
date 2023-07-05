@@ -11,10 +11,10 @@ function Header() {
 		<header>
 			<img src={Logo} alt="Logo" />
 			<nav>
-				<Link className={isOnHome && 'link-active'} to="/">
+				<Link className={isOnHome ? 'link-active' : ''} to="/">
 					Accueil
 				</Link>
-				<Link className={isOnAbout && 'link-active'} to="/about">
+				<Link className={isOnAbout ? 'link-active' : ''} to="/about">
 					A Propos
 				</Link>
 			</nav>
