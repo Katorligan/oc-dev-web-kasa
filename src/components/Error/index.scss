@@ -1,8 +1,7 @@
 @use '../../utils/styles' as *;
 
 .error {
-	display: flex;
-	flex-direction: column;
+	@include flex-column;
 	align-items: center;
 	color: $color-primary;
 

@@ -3,7 +3,7 @@
 .title-host-wrapper {
 	display: flex;
 	justify-content: space-between;
-	margin: 30px 0 0;
+	margin-top: 30px;
 	min-height: 120px;
 
 	@media (max-width: 700px) {
@@ -14,8 +14,7 @@
 	}
 
 	.title-tags-wrapper {
-		display: flex;
-		flex-direction: column;
+		@include flex-column;
 		justify-content: space-between;
 
 		.title-wrapper {
@@ -72,8 +71,7 @@
 	}
 
 	.host-rating-wrapper {
-		display: flex;
-		flex-direction: column;
+		@include flex-column;
 		justify-content: space-between;
 		align-items: flex-end;
 

@@ -1,9 +1,10 @@
+@use '../../utils/styles' as *;
+
 .banner {
 	position: relative;
 
 	img {
-		width: 100%;
-		height: 200px;
+		@include full-width-set-height(200px);
 		border-radius: 25px;
 		object-fit: cover;
 
@@ -18,8 +19,7 @@
 	}
 
 	.dark-bg {
-		width: 100%;
-		height: 200px;
+		@include full-width-set-height(200px);
 		border-radius: 25px;
 		position: absolute;
 		top: 0;
