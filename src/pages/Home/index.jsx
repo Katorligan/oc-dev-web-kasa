@@ -3,6 +3,7 @@ import Banner from '../../components/Banner';
 import Card from '../../components/Card';
 import Loader from '../../components/Loader';
 import bannerPicture from '../../assets/images/banner_home.png';
+import housesData from '../../assets/data/logements.json';
 import './index.scss';
 
 function Home() {
@@ -10,18 +11,9 @@ function Home() {
 	const [isLoading, setLoading] = useState(true);
 
 	useEffect(() => {
-		async function fetchData() {
-			try {
-				const response = await fetch('./logements.json');
-				const data = await response.json();
-				setHouses(data);
-			} catch (e) {
-				console.log(e);
-			} finally {
-				setLoading(false);
-			}
-		}
-		fetchData();
+		const data = housesData;
+		setHouses(data);
+		setLoading(false);
 	}, []);
 
 	return (
